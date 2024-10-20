@@ -37,7 +37,7 @@ with DAG(
     #Apply Bash to download the URL response with curl
     download_launches = BashOperator(
         task_id="download_launches",
-        bash_command="curl -o /opttt/airflow/dags/rockets/launches/launches.json -L https://ll.thespacedevs.com/2.0.0/launch/upcoming"
+        bash_command="curl -o /opt/airflow/dags/rockets/launches/launches.json -L https://ll.thespacedevs.com/2.0.0/launch/upcoming"
     )
     
     #Call the Python function in the DAG with a PythonOperator
